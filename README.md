@@ -1,34 +1,45 @@
-# Transfer Nightscout data to LibreView
-Transfer your diabetes data from Nightscout to LibreView.
+# Передача (в ручном режиме) данных из Nightscout в LibreView.
 
-## Requirements
-- git
+## Для начала нужно установить:
+- git:
+```
+sudo apt update
+sudo apt install git
+Проверяем, что GIT встал: git version
+```
 - nodejs
-
-## First use
-
-Open command line in your favorite folder:
 ```
-git clone https://github.com/creepymonster/nightscout-to-libreview
-cd nightscout-to-libreview
-npm install
-npm start
+sudo apt update
+sudo apt install nodejs
+Проверяем, что Nodejs встал: nodejs -v
 ```
 
-## Future use
+Делаем клон из репозитория:
+```
+git clone https://github.com/mo211073bkp/mynightscout-librelink-up
+```
 
-Open command line in your favorite folder:
+Переходим в папку клона и устанавливаем npm:
 ```
 cd nightscout-to-libreview
-npm start
+sudo apt install npm
 ```
 
-## Todo
-- many many testing!
-- better error handling
-- clean up entry point
-- clean up user input
-- add frequent unscheduledContinuousGlucoseEntries
-- add notes from libreview
-- add basal insulin?!?
-- different libreview api endpoints
+
+## Теперь всё готово к использованию, если Вы не в каталоге, то нужно в него перейти:
+
+В консоли выполняем команды:
+```
+cd nightscout-librelink-up
+npm start
+```
+В ходе выполнения скрипта Вам необходимо ввести:
+```
+nightscout url: в формате https://mysite.ru
+nightscout token: 075c777ac34218c79c94c0d7089052d394775e88e - это преобразованный в SHA1  Ваш API secret.
+libreview username: qwertysdp@gmail.com - Ваш E-mail, указанный при регистрации на сайте LibreView.
+libreview password: koala_54 - Ваш пароль, указанный при регистрации на сайте LibreView.
+the year you want to transfer to libreview:  2023 - данные какого года передаем
+the month you want to transfer to libreview:  1 - указываем порядковый номер месяца, за который передаем данные
+if you have problems with your transfer, recreate your device id: - можно оставить поле пустым.
+```
