@@ -16,7 +16,7 @@ sudo apt install nodejs
 
 Делаем клон из репозитория:
 ```
-git clone https://github.com/mo211073bkp/mynightscout-librelink-up
+git clone https://github.com/creepymonster/nightscout-to-libreview
 ```
 
 Переходим в папку клона и устанавливаем npm:
