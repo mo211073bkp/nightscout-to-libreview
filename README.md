@@ -30,7 +30,7 @@ sudo apt install npm
 
 В консоли выполняем команды:
 ```
-cd nightscout-librelink-up
+cd nightscout-to-libreview
 npm start
 ```
 В ходе выполнения скрипта Вам необходимо ввести:
